@@ -3,10 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.0.RELEASE</version>
+    </parent>
 
     <groupId>com.github.ermu0420</groupId>
     <artifactId>docker-example</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <url>https://github.com/ermu0420/docker-example</url>
     <licenses>
         <license>
@@ -16,11 +22,7 @@
             <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RELEASE</version>
-    </parent>
+
     <properties>
         <docker.image.prefix>ermu0420</docker.image.prefix>
         <docker.plugin.version>0.4.13</docker.plugin.version>
@@ -28,10 +30,10 @@
         <maven.compile.source>1.8</maven.compile.source>
         <maven.compile.target>1.8</maven.compile.target>
     </properties>
+
     <modules>
     <module>eureka-server</module>
     </modules>
-    <packaging>pom</packaging>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
