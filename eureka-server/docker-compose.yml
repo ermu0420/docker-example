@@ -1,0 +1,32 @@
+version: '3'
+services:
+  peer1:
+    image: ermu0420/eureka-server
+    #    deploy:
+    #      replicas: 1   #定义 replicated 模式的服务的复本数量
+    #      update_config:
+    #        parallelism: 1    #每次更新复本数量
+    #        delay: 2s       #每次更新间隔
+    #      restart_policy:
+    #        condition: on-failure     #定义服务的重启条件
+    #      networks:
+    #      - eureka-net
+    ports:
+    - "8761:8761"
+    environment:
+    - spring.profiles.active=peer1
+  peer2:
+    image: ermu0420/eureka-server
+    ports:
+    - "8762:8762"
+    environment:
+    - spring.profiles.active=peer2
+  peer3:
+    image: ermu0420/eureka-server
+    ports:
+    - "8763:8763"
+    environment:
+    - spring.profiles.active=peer3
+#networks:
+#  eureka-net:            #网络名称
+#    driver: overlay
