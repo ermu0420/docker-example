@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.github.ermu0420</groupId>
-    <artifactId>eureka-server</artifactId>
+    <artifactId>docker-eureka-server</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>eureka-server</name>
     <description>Demo project for Spring Boot</description>
